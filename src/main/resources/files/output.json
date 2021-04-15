@@ -1,0 +1,41 @@
+{
+  "type" : "search",
+  "results" : [ {
+    "criteria" : {
+      "lastName" : "Иванов"
+    },
+    "results" : [ {
+      "lastName" : "Иванов",
+      "firstName" : "Иван"
+    } ]
+  }, {
+    "criteria" : {
+      "productName" : "молоко",
+      "minTimes" : "2"
+    },
+    "results" : [ {
+      "lastName" : "Иванов",
+      "firstName" : "Иван"
+    } ]
+  }, {
+    "criteria" : {
+      "minExpenses" : "100",
+      "maxExpenses" : "150"
+    },
+    "results" : [ {
+      "lastName" : "Петров",
+      "firstName" : "Петр"
+    } ]
+  }, {
+    "criteria" : {
+      "badCustomers" : "2"
+    },
+    "results" : [ {
+      "lastName" : "Петров",
+      "firstName" : "Петр"
+    }, {
+      "lastName" : "Кузнецова",
+      "firstName" : "Анна"
+    } ]
+  } ]
+}

@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/junior_test
+    username: postgres
+    password: 123456
+
+  jpa:
+    show-sql: true
+    generate-ddl: true
+
+criterias:
+  values:
+    EXPENSE:
+      - minExpenses
+      - maxExpenses
+    LAST_NAME:
+      - lastName
+    PRODUCT:
+      - productName
+      - minTimes
+    BAD_CUSTOMER:
+      - badCustomers
