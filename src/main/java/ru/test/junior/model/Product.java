@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 @Data
@@ -15,4 +16,7 @@ public class Product {
     private String name;
 
     private Double price;
+
+    @Transient
+    private Double expenses;
 }

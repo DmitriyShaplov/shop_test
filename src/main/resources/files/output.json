@@ -1,41 +1,40 @@
 {
-  "type" : "search",
-  "results" : [ {
-    "criteria" : {
-      "lastName" : "Иванов"
-    },
-    "results" : [ {
-      "lastName" : "Иванов",
-      "firstName" : "Иван"
-    } ]
-  }, {
-    "criteria" : {
-      "productName" : "молоко",
-      "minTimes" : "2"
-    },
-    "results" : [ {
-      "lastName" : "Иванов",
-      "firstName" : "Иван"
-    } ]
-  }, {
-    "criteria" : {
-      "minExpenses" : "100",
-      "maxExpenses" : "150"
-    },
-    "results" : [ {
-      "lastName" : "Петров",
-      "firstName" : "Петр"
-    } ]
-  }, {
-    "criteria" : {
-      "badCustomers" : "2"
-    },
-    "results" : [ {
-      "lastName" : "Петров",
-      "firstName" : "Петр"
+  "type" : "stat",
+  "totalDays" : 13,
+  "customers" : [ {
+    "name" : "Иванов Иван",
+    "purchases" : [ {
+      "name" : "хлеб",
+      "expenses" : 511.0
     }, {
-      "lastName" : "Кузнецова",
-      "firstName" : "Анна"
-    } ]
-  } ]
+      "name" : "масло",
+      "expenses" : 420.0
+    }, {
+      "name" : "молоко",
+      "expenses" : 225.0
+    } ],
+    "totalExpenses" : 1156.0
+  }, {
+    "name" : "Петров Петр",
+    "purchases" : [ {
+      "name" : "хлеб",
+      "expenses" : 511.0
+    }, {
+      "name" : "сметана",
+      "expenses" : 45.0
+    } ],
+    "totalExpenses" : 556.0
+  }, {
+    "name" : "Кузнецова Анна",
+    "purchases" : [ {
+      "name" : "масло",
+      "expenses" : 140.0
+    }, {
+      "name" : "сыр",
+      "expenses" : 120.0
+    } ],
+    "totalExpenses" : 260.0
+  } ],
+  "totalExpenses" : 1972.0,
+  "avgExpenses" : 657.33
 }

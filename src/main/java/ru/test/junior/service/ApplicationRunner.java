@@ -1,6 +1,7 @@
 package ru.test.junior.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -12,6 +13,7 @@ import java.nio.file.Paths;
 import java.util.Map;
 
 @Component
+@Slf4j
 public class ApplicationRunner implements CommandLineRunner {
 
     @Autowired
@@ -31,6 +33,7 @@ public class ApplicationRunner implements CommandLineRunner {
         try {
             serviceMap.get(operation.name()).process(input, output);
         } catch (Exception e) {
+            log.error(e.getMessage(), e);
             ErrorResult errorResult = new ErrorResult(e.getMessage());
             objectMapper.writeValue(output, errorResult);
         }
